@@ -3,7 +3,7 @@
     <parent>
         <artifactId>release</artifactId>
         <groupId>learn.maven.plugin</groupId>
-        <version>0.2.0-RELEASE</version>
+        <version>0.2.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
