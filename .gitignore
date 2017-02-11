@@ -1,0 +1,22 @@
+
+# IntelliJ IDEA files
+.idea
+.iws
+*.iml
+*.ipr
+
+# Eclipse files
+.settings
+.classpath
+.project
+.externalToolBuilders
+
+# bin
+*.class
+target/
+bin/
+
+# Package Files #
+*.jar
+*.war
+*.ear
