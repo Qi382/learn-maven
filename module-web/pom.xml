@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>release</artifactId>
         <groupId>learn.maven.plugin</groupId>
@@ -8,7 +9,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>module-web</artifactId>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.locales>zh_CN</project.build.locales>
+        <project.build.jdk>1.7</project.build.jdk>
 
+    </properties>
 
     <dependencies>
         <dependency>
@@ -22,4 +28,40 @@
             <version>${project.version}</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <build>
+                <filters>
+                    <filter>src/filter/filter-dev.properties</filter>
+                </filters>
+            </build>
+        </profile>
+        <profile>
+            <id>uat</id>
+            <build>
+                <filters>
+                    <filter>src/filter/filter-uat.properties</filter>
+                </filters>
+            </build>
+        </profile>
+        <profile>
+            <id>pro</id>
+            <build>
+                <filters>
+                    <filter>src/filter/filter-pro.properties</filter>
+                </filters>
+            </build>
+        </profile>
+    </profiles>
 </project>

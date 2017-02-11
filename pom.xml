@@ -11,7 +11,12 @@
         <module>module-common</module>
         <module>module-web</module>
     </modules>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.locales>zh_CN</project.build.locales>
+        <project.build.jdk>1.7</project.build.jdk>
 
+    </properties>
     <scm>
         <connection>scm:git:git@github.com:davidATJ/learn-maven.git</connection>
       <tag>HEAD</tag>
@@ -22,6 +27,7 @@
             <plugin>
                 <artifactId>maven-release-plugin</artifactId>
                 <configuration>
+                    <goals>install</goals>
                     <scmCommentPrefix>自动release</scmCommentPrefix>
                 </configuration>
             </plugin>
