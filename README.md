@@ -41,7 +41,7 @@ prepare 会执行一个版本号的替换工作,打tag等工作 , 下面的代�
 
 
 ```shell
- mvn release:clean release:prepare -Dtag=david -DdevelopmentVersion=1.1-SNAPSHOT -DreleaseVersion=1.0
+ mvn  --batch-mode release:clean release:prepare -Dtag=1.0 -DdevelopmentVersion=1.1-SNAPSHOT -DreleaseVersion=1.0
 ```
 
 perform 会执行goals
