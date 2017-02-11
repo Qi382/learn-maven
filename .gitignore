@@ -24,5 +24,6 @@ bin/
 
 # maven
 *.releaseBackup
+*.versionsBackup
 release.properties
 release-pom.xml
