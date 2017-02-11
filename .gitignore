@@ -27,3 +27,5 @@ bin/
 *.versionsBackup
 release.properties
 release-pom.xml
+pom.xml.tag
+pom.xml.next
