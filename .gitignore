@@ -20,3 +20,8 @@ bin/
 *.jar
 *.war
 *.ear
+
+
+# maven
+*.releaseBackup
+release.properties
